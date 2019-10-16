@@ -32,7 +32,7 @@ public static class GameResources
 	private static void LoadImages()
 	{
 		//Backgrounds
-		NewImage("Menu", "battleship.jpg");
+		NewImage("Menu", "main.jpg");
 		NewImage("Discovery", "discover.jpg");
 		NewImage("Deploy", "deploy.jpg");
 
