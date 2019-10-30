@@ -27,6 +27,7 @@ public static class GameResources
 		NewFont("Courier", "cour.ttf", 14);
 		NewFont("CourierSmall", "cour.ttf", 8);
 		NewFont("Menu", "ffaccess.ttf", 8);
+		NewFont ("Zombie", "Zombie_Night.ttf", 20);
 	}
 
 	private static void LoadImages()
