@@ -21,6 +21,42 @@ public static class GameController
 	private static AIPlayer _ai;
 
 	private static Stack<GameState> _state = new Stack<GameState>();
+    public static Timer _timer = SwinGame.CreateTimer();
+
+    public static Timer Timer
+    {
+        get { return _timer; }
+    }
+
+    public static string Timers()
+    {
+        int timerString = 100000;
+        timerString -= (int)SwinGame.TimerTicks(Timer);
+        timerString /= 1000;
+
+        if (timerString < 0)
+        {
+            timerString = 0;
+            SwitchState(GameState.EndingGame);
+        }
+        int _minute;
+        int _second;
+
+        _minute = timerString / 60;
+        _second = timerString - (_minute * 60);
+
+        string _timeLeft;
+
+        if (_second < 10)
+        {
+            _timeLeft = _minute + ":0" + _second;
+        }
+        else
+        {
+            _timeLeft = _minute + ":" + _second;
+        }
+            return _timeLeft;
+    }
 
 	private static AIOption _aiSetting;
 	/// <summary>
