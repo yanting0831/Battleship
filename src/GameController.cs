@@ -55,7 +55,8 @@ public static class GameController
         {
             _timeLeft = _minute + ":" + _second;
         }
-            return _timeLeft;
+
+        return _timeLeft;
     }
 
 	private static AIOption _aiSetting;
@@ -364,25 +365,32 @@ public static class GameController
 		{
 			case GameState.ViewingMainMenu:
 				MenuController.DrawMainMenu();
+                SwinGame.StopTimer(Timer);
 				break;
 			case GameState.ViewingGameMenu:
 				MenuController.DrawGameMenu();
-				break;
+                SwinGame.StopTimer(Timer);
+                break;
 			case GameState.AlteringSettings:
 				MenuController.DrawSettings();
-				break;
+                SwinGame.StopTimer(Timer);
+                break;
 			case GameState.Deploying:
 				DeploymentController.DrawDeployment();
-				break;
+                SwinGame.ResetTimer(Timer);
+                break;
 			case GameState.Discovering:
 				DiscoveryController.DrawDiscovery();
-				break;
+                if (SwinGame.TimerTicks(Timer) == 0)
+                    SwinGame.StartTimer(Timer);
+                break;
 			case GameState.EndingGame:
 				EndingGameController.DrawEndOfGame();
 				break;
 			case GameState.ViewingHighScores:
 				HighScoreController.DrawHighScores();
-				break;
+                SwinGame.StopTimer(Timer);
+                break;
 		}
 
 		UtilityFunctions.DrawAnimations();
