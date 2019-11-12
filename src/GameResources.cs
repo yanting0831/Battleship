@@ -26,8 +26,9 @@ public static class GameResources
 		NewFont("ArialLarge", "arial.ttf", 80);
 		NewFont("Courier", "cour.ttf", 14);
 		NewFont("CourierSmall", "cour.ttf", 8);
-		NewFont("Menu", "ffaccess.ttf", 8);
+		NewFont("Menu", "dealerplate california.ttf", 20);
 		NewFont ("Zombie", "Zombie_Night.ttf", 20);
+		NewFont ("Dealer", "dealerplate california.ttf", 25);
 	}
 
 	private static void LoadImages()
