@@ -8,7 +8,7 @@
     <Files>
       <File FileName="src\GameResources.cs" Line="29" Column="51" />
       <File FileName="src\HighScoreController.cs" Line="199" Column="76" />
-      <File FileName="src\MenuController.cs" Line="211" Column="79" />
+      <File FileName="src\MenuController.cs" Line="90" Column="24" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.ItemProperties.BattleShips PreferredExecutionTarget="MonoDevelop.Default" />
